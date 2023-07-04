@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*body {
+    color: white;
+    font-family: arial, sans-serif;
+}/*
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+/* NAVBAR */
+.container>.navbar, .container>ul, .container>li {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    color: white;
+    font-family: arial, sans-serif;
+    text-transform: uppercase;
+    font-size:x-small;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+}
+
+/* CONTAINER */
+
+.container {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    gap: 1.6em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container>.header, .container>.main-content, .container>.footer, .container>.image-gal {
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.container>.header, .container>.footer {
+    grid-column: 1/-1;
+    background-color: orange;
+    color: white;
+}
+
+/* MAIN ARTICLES */
+
+.container>.main-content {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.main-content>.article-cont {
+    background: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9
+}
+
+.main-content .article-cont h1, .main-content .article-cont p {
+    padding: 10px;
+}
+
+/* IMAGES DIVS */
+
+.container>.image-gal {
+    background: grey;
+    color: #ffffff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOOTER */
+
+.first-p {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    padding-top: 25px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+.second-p {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    padding-top: 0px;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+
+footer img {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    display: inline;
+}
+
+/* MOBILE RESOLUTION */
+
+@media screen and (max-width: 768px) {
+    .container .header {
+        text-align: center;
+        background-color: grey;
+        color: blue;
+    }
+
+    .container .main-content {
+        grid-column: 1 / -1;
+    }
+
+    .container .image-gal {
+        grid-column: 1/-1;
+    }
+
+    .container .footer {
+        color: blue;
+    }
+}
